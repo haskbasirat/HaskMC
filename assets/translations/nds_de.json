@@ -1,12 +1,12 @@
 {
-    "commands.pumpkin.version": "Pumpkin %s\n",
-    "commands.pumpkin.description": "Mookt dat jedermann mööglich, flinke Minecraft Server to kriegen.",
-    "commands.pumpkin.minecraft_version": "(Minecraft %1$s, Protokoll %2$s)\n",
-    "commands.pumpkin.github": "[GitHub-Repository]",
-    "commands.pumpkin.website": "[Websiet]",
-    "commands.pumpkin.version.hover": "Drück hier, üm de Version to koperen.",
-    "commands.pumpkin.description.hover": "Drück hier, üm de Version to koperen.",
-    "commands.pumpkin.minecraft_version.hover": "Drück hier, üm de Minecraft-Version to koperen.",
-    "commands.pumpkin.github.hover": "Drück hier, üm de GitHub-Repository to opdoon.",
-    "commands.pumpkin.website.hover": "Drück hier, üm de Websiet to opdoon."
+    "commands.haskmc.version": "HaskMC %s\n",
+    "commands.haskmc.description": "Mookt dat jedermann mööglich, flinke Minecraft Server to kriegen.",
+    "commands.haskmc.minecraft_version": "(Minecraft %1$s, Protokoll %2$s)\n",
+    "commands.haskmc.github": "[GitHub-Repository]",
+    "commands.haskmc.website": "[Websiet]",
+    "commands.haskmc.version.hover": "Drück hier, üm de Version to koperen.",
+    "commands.haskmc.description.hover": "Drück hier, üm de Version to koperen.",
+    "commands.haskmc.minecraft_version.hover": "Drück hier, üm de Minecraft-Version to koperen.",
+    "commands.haskmc.github.hover": "Drück hier, üm de GitHub-Repository to opdoon.",
+    "commands.haskmc.website.hover": "Drück hier, üm de Websiet to opdoon."
 }

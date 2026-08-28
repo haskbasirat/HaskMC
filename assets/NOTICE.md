@@ -1,39 +1,53 @@
-# Third-Party Assets & Attribution Notice
+# Third-Party Assets and Data Notice
 
-This repository contains data files, protocol mappings, and game assets necessary for Minecraft protocol compatibility, server emulation, and world generation.
+This directory contains inherited data files, protocol mappings, tests, and game-derived assets.
+They are not all licensed under the HaskMC/Pumpkin GPL license. This notice records provenance; it
+does not grant rights that the identified owner or license has not granted.
 
----
+## 1. Minecraft assets and data
 
-### 1. Minecraft Assets & Data Packs
-* **Files**: `assets/datapacks/`, `assets/blocks.json`, `assets/items.json`, `assets/entities.json`, `assets/fluids.json`, `assets/properties.json`, and `assets/en_us_java.json`.
-* **Copyright**: © Mojang Studios / Microsoft Corporation.
-* **Terms**: These files are extracted or derived from Minecraft client and server releases. They are provided solely for compatibility, server emulation, and interoperability under the terms of the [Minecraft End User License Agreement (EULA)](https://www.minecraft.net/en-us/eula) and [Mojang Brand and Assets Guidelines](https://www.minecraft.net/en-us/usage-guidelines).
-* **Note**: These files are **not** licensed under Pumpkin's GPLv3 license and remain the intellectual property of Mojang Studios.
+- **Locations**: `assets/datapacks/`, `assets/loot_table/`, Minecraft registry and language files
+  under `assets/`, structure/template data consumed by `crates/haskmc-world`, and generated Rust
+  data derived from those inputs.
+- **Owner**: Mojang Studios and/or Microsoft Corporation, where copyrightable Minecraft content is
+  present.
+- **Status**: inherited from Pumpkin and not licensed under GPLv3. Redistribution status is under
+  review in <https://github.com/Pumpkin-MC/Pumpkin/issues/2472>.
+- **Terms**: <https://www.minecraft.net/eula> and
+  <https://www.minecraft.net/usage-guidelines>.
 
----
+Attribution does not turn Minecraft game files into open-source content or establish permission to
+redistribute them. No local decompiled sources, game JARs, reference worlds, or newly copied
+structure files are part of the HaskMC rebrand commit.
 
-### 2. Bedrock & Geyser Mappings
-* **Files**: `assets/bedrock/`
-* **Copyright**: © 2019-2026 GeyserMC (https://geysermc.org) and contributors.
-* **License**: MIT License (see `assets/bedrock/LICENSE-GEYSER`).
-* **Bedrock Dedicated Server (BDS) Data**: Portions of Bedrock state metadata are mined from BDS under standard Minecraft usage guidelines.
+## 2. Bedrock and Geyser mappings
 
----
+- **Location**: `assets/bedrock/`
+- **Source attribution**: GeyserMC and contributors where identified by file history/comments.
+- **License**: MIT for Geyser-owned contributions; see `assets/bedrock/LICENSE-GEYSER`.
 
-### 3. Protocol Version Translation (ViaVersion / ViaBackwards / ViaRewind)
-* **Files**: `assets/viabackwards/`, `assets/viarewind/`
-* **Copyright**: © ViaVersion contributors (https://github.com/ViaVersion).
-* **License**: GPLv3 / MIT.
+Some Bedrock-derived data may carry separate underlying Mojang/Microsoft rights or incomplete
+file-level provenance. The Geyser MIT license covers only material its licensors had authority to
+license.
 
----
+## 3. Protocol version translation
 
-### 4. Conventional Tags (`c:`)
-* **Files**: `assets/datapacks/26_2/data/c/tags/`
-* **Standard**: Fabric & NeoForge Conventional / Common Tags specification.
-* **License**: Apache-2.0 / MIT.
+- **Locations**: `assets/viabackwards/`, `assets/viarewind/`
+- **Projects**: ViaVersion, ViaBackwards, and ViaRewind contributors.
+- **Licenses**: applicable GPLv3 and/or MIT terms and upstream notices.
 
----
+## 4. Conventional tags (`c:`)
 
-### 5. Pumpkin Source Code & Plugin API
-* **Server Source Code**: All original Pumpkin server source code, custom tools, and code generators are licensed under the **GNU General Public License v3.0 (GPLv3)** (see the root `LICENSE` file).
-* **Plugin API**: The `pumpkin-plugin-api` and `pumpkin-plugin-wit` crates are dual-licensed under **MIT OR Apache-2.0** to allow plugin authors to use their preferred license.
+- **Location**: `assets/datapacks/26_2/data/c/tags/`
+- **Standard**: Fabric and NeoForge conventional/common tags.
+- **Licenses**: applicable Apache-2.0 and/or MIT terms.
+
+## 5. Source-code licenses
+
+- Original Pumpkin server source remains GNU GPL version 3 only, with authorship preserved in Git.
+- HaskMC server modifications are GNU GPL version 3 only; see the root `LICENSE`.
+- `haskmc-plugin-api`, `haskmc-plugin-utils`, and the inherited plugin-WIT submodule are dual-
+  licensed under MIT or Apache-2.0, with original Pumpkin Contributors notices retained.
+
+See the root `FORK_NOTICE.md` and `THIRD_PARTY_NOTICES.md` for the complete fork notice and current
+distribution policy.

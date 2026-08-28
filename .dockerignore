@@ -8,7 +8,11 @@
 !/crates/
 !/tools/
 !/assets/
+!/haskmc.toml
 !/pumpkin.toml
+!/LICENSE
+!/FORK_NOTICE.md
+!/THIRD_PARTY_NOTICES.md
 
 # Allow build.rs to read git commit sha
 !/.git

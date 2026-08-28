@@ -1,12 +1,12 @@
 {
-    "commands.pumpkin.version": "Pumpkin %s\n",
-    "commands.pumpkin.description": "Dando a todos el poder de alojar servidores \nde Minecraft rápidos y eficientes.\n",
-    "commands.pumpkin.minecraft_version": "(Minecraft %1$s, Protocolo %2$s)\n",
-    "commands.pumpkin.github": "[Repositorio de Github]",
-    "commands.pumpkin.website": "[Página Web]",
-    "commands.pumpkin.version.hover": "Haz clic para copiar la versión",
-    "commands.pumpkin.description.hover": "Haz clic para copiar la descripción",
-    "commands.pumpkin.minecraft_version.hover": "Haz clic para copiar la versión de Minecraft",
-    "commands.pumpkin.github.hover": "Haz clic para abrir el repositorio.",
-    "commands.pumpkin.website.hover": "Haz clic para abrir la página web."
+    "commands.haskmc.version": "HaskMC %s\n",
+    "commands.haskmc.description": "Dando a todos el poder de alojar servidores \nde Minecraft rápidos y eficientes.\n",
+    "commands.haskmc.minecraft_version": "(Minecraft %1$s, Protocolo %2$s)\n",
+    "commands.haskmc.github": "[Repositorio de Github]",
+    "commands.haskmc.website": "[Página Web]",
+    "commands.haskmc.version.hover": "Haz clic para copiar la versión",
+    "commands.haskmc.description.hover": "Haz clic para copiar la descripción",
+    "commands.haskmc.minecraft_version.hover": "Haz clic para copiar la versión de Minecraft",
+    "commands.haskmc.github.hover": "Haz clic para abrir el repositorio.",
+    "commands.haskmc.website.hover": "Haz clic para abrir la página web."
 }

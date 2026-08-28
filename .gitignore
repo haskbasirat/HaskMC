@@ -110,6 +110,7 @@ data/*
 
 # project's configurations
 pumpkin.toml
+haskmc.toml
 nethernet-key.der
 
 
@@ -157,3 +158,11 @@ version_history.json
 world_nether/
 world_the_end/
 patchbukkit/
+
+# Vanilla/decompiled reference material must remain local and untracked.
+vanilla-reference/
+decompiled/
+reference-worlds/
+
+# Local Mojang structure extracts used for parity tests; never redistribute.
+crates/haskmc-world/assets/structures/spring/

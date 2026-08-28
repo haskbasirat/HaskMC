@@ -1,8 +1,8 @@
 <!-- Follow the Conventional Commits spec: <https://www.conventionalcommits.org/en/v1.0.0/> -->
-<!-- Empty or bad descriptions are not welcome. Don't waste my time -->
+<!-- Please provide enough context for a reviewer to understand and verify the change. -->
 
 ## Description
 
 ## Testing
 
-Please follow our [Coding Guidelines](https://github.com/Pumpkin-MC/Pumpkin/blob/master/CONTRIBUTING.md#coding-guidelines)
+Please follow our [contribution guidelines](https://github.com/haskbasirat/HaskMC/blob/main/CONTRIBUTING.md), including the provenance requirements.

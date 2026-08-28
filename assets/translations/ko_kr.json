@@ -1,12 +1,12 @@
 {
-  "commands.pumpkin.version": "Pumpkin %s\n",
-  "commands.pumpkin.description": "모든 사람이 빠르고 효율적인 마인크래프트 서버를 호스팅할 수 있도록 지원합니다.\n",
-  "commands.pumpkin.minecraft_version": "(마인크래프트 %s, 프로토콜 %s)\n",
-  "commands.pumpkin.github": "[깃허브 저장소]",
-  "commands.pumpkin.website": "[웹사이트]",
-  "commands.pumpkin.version.hover": "클릭하여 버전 복사",
-  "commands.pumpkin.description.hover": "클릭하여 설명 복사",
-  "commands.pumpkin.minecraft_version.hover": "클릭하여 마인크래프트 버전 복사",
-  "commands.pumpkin.github.hover": "클릭하여 저장소 열기.",
-  "commands.pumpkin.website.hover": "클릭하여 웹사이트 열기."
+  "commands.haskmc.version": "HaskMC %s\n",
+  "commands.haskmc.description": "모든 사람이 빠르고 효율적인 마인크래프트 서버를 호스팅할 수 있도록 지원합니다.\n",
+  "commands.haskmc.minecraft_version": "(마인크래프트 %s, 프로토콜 %s)\n",
+  "commands.haskmc.github": "[깃허브 저장소]",
+  "commands.haskmc.website": "[웹사이트]",
+  "commands.haskmc.version.hover": "클릭하여 버전 복사",
+  "commands.haskmc.description.hover": "클릭하여 설명 복사",
+  "commands.haskmc.minecraft_version.hover": "클릭하여 마인크래프트 버전 복사",
+  "commands.haskmc.github.hover": "클릭하여 저장소 열기.",
+  "commands.haskmc.website.hover": "클릭하여 웹사이트 열기."
 }

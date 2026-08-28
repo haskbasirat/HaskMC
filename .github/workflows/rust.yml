@@ -130,9 +130,10 @@ jobs:
           profile: pixel_5
           force-avd-creation: false
           emulator-options: -no-snapshot-load -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
-          script: cargo ndk-test -t arm64-v8a
+          script: cargo ndk-test -t x86_64
   build_release:
     name: Build project in release
+    if: vars.ENABLE_BINARY_RELEASES == 'true'
     runs-on: ${{ matrix.os }}
     needs: [build_and_test]
     strategy:
@@ -181,23 +182,29 @@ jobs:
           mkdir -p dist
           EXT=""
           if [ "${{ runner.os }}" == "Windows" ]; then EXT=".exe"; fi
-          cp "target/release/pumpkin$EXT" "dist/pumpkin-${{ runner.arch }}-${{ runner.os }}$EXT"
+          cp "target/release/haskmc$EXT" "dist/haskmc-${{ runner.arch }}-${{ runner.os }}$EXT"
           if [ "${{ runner.os }}" == "Linux" ]; then
             if [ "${{ runner.arch }}" == "X64" ]; then
               TARGET="x86_64-unknown-linux-musl"
             elif [ "${{ runner.arch }}" == "ARM64" ]; then
               TARGET="aarch64-unknown-linux-musl"
             fi
-            cp "target/$TARGET/release/pumpkin" "dist/pumpkin-${{ runner.arch }}-${{ runner.os }}-musl"
+            cp "target/$TARGET/release/haskmc" "dist/haskmc-${{ runner.arch }}-${{ runner.os }}-musl"
           fi
+          cp LICENSE FORK_NOTICE.md THIRD_PARTY_NOTICES.md dist/
       - name: Export executable
         uses: actions/upload-artifact@v7
         with:
-          name: pumpkin-${{ runner.arch }}-${{ runner.os }}
+          name: haskmc-${{ runner.arch }}-${{ runner.os }}
           compression-level: 9
-          path: dist/pumpkin-*
+          path: |
+            dist/haskmc-*
+            dist/LICENSE
+            dist/FORK_NOTICE.md
+            dist/THIRD_PARTY_NOTICES.md
   build_android_release:
     name: Build project in release for Android (AArch64)
+    if: vars.ENABLE_BINARY_RELEASES == 'true'
     runs-on: ubuntu-latest
     needs: [test_android]
     steps:
@@ -221,19 +228,24 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          cp "target/aarch64-linux-android/release/pumpkin" "dist/pumpkin-aarch64-android"
+          cp "target/aarch64-linux-android/release/haskmc" "dist/haskmc-aarch64-android"
+          cp LICENSE FORK_NOTICE.md THIRD_PARTY_NOTICES.md dist/
       - name: Export executable
         uses: actions/upload-artifact@v7
         with:
-          name: pumpkin-aarch64-android
+          name: haskmc-aarch64-android
           compression-level: 9
-          path: dist/pumpkin-aarch64-android
+          path: |
+            dist/haskmc-aarch64-android
+            dist/LICENSE
+            dist/FORK_NOTICE.md
+            dist/THIRD_PARTY_NOTICES.md
   draft_release:
     permissions:
       contents: write
     needs: [build_release, build_android_release]
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: vars.ENABLE_NIGHTLY_RELEASE == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v7
         with:
@@ -241,7 +253,7 @@ jobs:
       - name: Download prebuilt binary artifacts
         uses: actions/download-artifact@v8
         with:
-          pattern: "**/pumpkin-*"
+          pattern: "haskmc-*"
           path: dist/
           merge-multiple: true
       - name: Generate release notes
@@ -261,7 +273,7 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           prerelease: true
-          files: dist/pumpkin*
+          files: dist/*
           tag_name: nightly
           name: Nightly Build
           body_path: dist/RELEASE.md

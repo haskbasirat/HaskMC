@@ -1,122 +1,88 @@
 <div align="center">
 
-# Pumpkin
+<img src="assets/haskmc-logo.png" alt="HaskMC logo" width="220">
 
-![CI](https://github.com/Pumpkin-MC/Pumpkin/actions/workflows/rust.yml/badge.svg)
-[![Discord](https://img.shields.io/discord/1268592337445978193.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/wT8XjrjKkf)
-[![License: GPL](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://opensource.org/licenses/gpl-3-0)
+# HaskMC
 
-</div>
-
-[Pumpkin](https://pumpkinmc.org/) is a Minecraft server built entirely in Rust, offering a fast, efficient,
-and customizable experience. It prioritizes performance and player enjoyment while adhering to the core mechanics of the game.
-<div align="center">
-
-![Pumpkin Chunk Loading](./assets/pumpkin-chunk-loading.webp)
+[![CI](https://github.com/haskbasirat/HaskMC/actions/workflows/rust.yml/badge.svg)](https://github.com/haskbasirat/HaskMC/actions/workflows/rust.yml)
+[![License: GPLv3 only](https://img.shields.io/badge/License-GPLv3--only-yellow.svg)](LICENSE)
 
 </div>
 
-## Goals
-
-- **Performance**: Leveraging multi-threading for maximum speed and efficiency.
-- **Compatibility**: Supports the latest Java & Bedrock Minecraft server version while adhering to Vanilla game mechanics.
-- **Security**: Prioritizes security by preventing known security exploits.
-- **Flexibility**: Highly configurable, with the ability to disable unnecessary features.
-- **Extensibility**: Provides a foundation for plugin development.
+HaskMC is an independent, modified fork of [Pumpkin](https://github.com/Pumpkin-MC/Pumpkin),
+a high-performance Minecraft-compatible server written in Rust. This rebrand is based on
+Pumpkin commit [`9e9f1b5784019e18574936684902bc34067d1602`](https://github.com/Pumpkin-MC/Pumpkin/commit/9e9f1b5784019e18574936684902bc34067d1602)
+and preserves the upstream Git history and contributor attribution.
 
 > [!IMPORTANT]
-> Pumpkin is currently under heavy development.
+> **NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.**
 >
-> [See what needs to be done before the 1.0.0 Release](https://github.com/Pumpkin-MC/Pumpkin/issues/449)
+> HaskMC is not affiliated with, endorsed by, or sponsored by PumpkinMC. “Pumpkin” refers
+> to the upstream open-source project and is retained where attribution or compatibility
+> requires it.
 
-## Features
+Publisher and maintainer: [Hask Basirat](https://github.com/haskbasirat). Project questions
+and notices can be submitted through the [HaskMC issue tracker](https://github.com/haskbasirat/HaskMC/issues).
 
-- [x] Configuration (toml)
-- [Tracking: Protocol](https://github.com/Pumpkin-MC/Pumpkin/issues/1401)
-  - [x] Server Status/Ping
-  - [x] Encryption
-  - [x] Packet Compression
-  - [x] Java Edition
-  - [x] Bedrock Edition (W.I.P)
-  - ...
-- [Tracking: World](https://github.com/Pumpkin-MC/Pumpkin/issues/1403)
-  - [x] Player Tab-list
-  - [x] Scoreboard
-  - [x] World Loading
-  - [x] World Time
-  - [x] World Borders
-  - [x] World Saving
-  - [x] Lighting
-  - [x] Entity Spawning
-  - [x] Bossbar
-  - [x] Chunk Loading (Vanilla, Linear, Pump)
-  - [Chunk Generation](https://github.com/Pumpkin-MC/Pumpkin/issues/36)
-  - [x] Chunk Saving (Vanilla, Linear, Pump)
-  - [Redstone](https://github.com/Pumpkin-MC/Pumpkin/issues/1402)
-  - [x] Liquid Physics
-  - ...
-- [Tracking: Player](https://github.com/Pumpkin-MC/Pumpkin/issues/1405)
-  - [x] Skins
-  - [x] Teleport
-  - [x] Movement
-  - [x] Animation
-  - [x] Inventory
-  - [Combat](https://github.com/Pumpkin-MC/Pumpkin/issues/1404)
-  - [x] Experience
-  - [x] Hunger
-  - [X] Off Hand
-  - [X] Advancements (W.I.P)
-  - [x] Eating
-  - ...
-- Entities
-  - [x] Non-Living (Minecart, Eggs...) (W.I.P)
-  - [x] Entity Effects
-  - [x] Players
-  - [x] Mobs (W.I.P)
-  - [x] Animals (W.I.P)
-  - [Entity AI](https://github.com/Pumpkin-MC/Pumpkin/issues/1406)
-  - [x] Boss (W.I.P)
-  - [x] Villagers (W.I.P)
-  - [X] Entity Saving
-- Server
-  - [Plugins](https://github.com/Pumpkin-MC/Pumpkin/issues/1407)
-  - [x] Query
-  - [x] RCON
-  - [x] Inventories
-  - [x] Particles
-  - [x] Chat
-  - [Commands](https://github.com/Pumpkin-MC/Pumpkin/issues/15)
-  - [x] Permissions
-  - [x] Translations
-- Proxy
-  - [x] [BungeeCord](https://github.com/SpigotMC/BungeeCord)
-  - [x] [BungeeGuard](https://github.com/lucko/BungeeGuard)
-  - [x] [Velocity](https://github.com/PaperMC/Velocity)
+## Project status
 
-<!-- Check out our [Github Project](https://github.com/orgs/Pumpkin-MC/projects/3) to see current progress. -->
+HaskMC is under active development. It aims to retain Pumpkin's performance, Java and Bedrock
+protocol support, vanilla-compatible mechanics, configurability, and plugin system while
+developing under a distinct identity.
 
-## How to run
+The initial HaskMC publication deliberately excludes local parity work derived from decompiled
+Minecraft code and copied local game assets. That work remains quarantined outside this public
+branch pending a clean-room rewrite or explicit legal clearance.
 
-See our [Quick Start](https://docs.pumpkinmc.org/#quick-start) guide to get Pumpkin running.
+## Quick start
 
-## Contributions
+Requirements are listed in [`rust-toolchain.toml`](rust-toolchain.toml).
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
+```shell
+git clone --recurse-submodules https://github.com/haskbasirat/HaskMC.git
+cd HaskMC
+cargo run --release --package haskmc
+```
 
-## Docs
+HaskMC writes configuration to `haskmc.toml`. If only a legacy `pumpkin.toml` exists, it is
+loaded once and migrated to `haskmc.toml` without deleting the original file.
 
-Pumpkin's documentation can be found at <https://pumpkinmc.org/>
+## Compatibility retained intentionally
 
-## Communication
+- `/haskmc` is the primary information command; `/pumpkin` remains a legacy alias.
+- New custom world data uses `HaskMCCustomData`; existing `PumpkinCustomData` is still read.
+- HaskMC's own resource namespace is `haskmc:`; the legacy `pumpkin:` helpers remain available.
+- The plugin WIT ABI remains `pumpkin:plugin@0.1.0` so existing Pumpkin plugins are not
+  needlessly broken. Marketplace metadata and signature names also remain Pumpkin-compatible.
+- Minecraft gameplay identifiers such as `minecraft:pumpkin`, `pumpkin_stem`, and
+  `carved_pumpkin` are game data, not project branding, and therefore remain unchanged.
 
-Consider joining [our Discord server](https://discord.gg/wT8XjrjKkf) to stay up-to-date on events, updates, and connect with other members.
+## Licensing and attribution
 
-## Funding
+- The HaskMC server and the original Pumpkin server portions are distributed under
+  [GNU GPL version 3 only](LICENSE). Source and modification history are preserved.
+- The plugin API and inherited plugin WIT definitions remain dual-licensed under MIT or
+  Apache-2.0; their original copyright notices are retained.
+- [FORK_NOTICE.md](FORK_NOTICE.md) records the fork origin, base revision, authorship, and
+  compatibility exceptions.
+- [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and
+  [assets/NOTICE.md](assets/NOTICE.md) identify separately licensed or proprietary material.
 
-If you want to fund me and help the project, check out the [Donation Page](https://pumpkinmc.org/donate/).
+### Important asset warning
 
-## License & Attribution
+The upstream Pumpkin history currently contains Minecraft-derived data and game assets whose
+redistribution status is under active review in
+[Pumpkin issue #2472](https://github.com/Pumpkin-MC/Pumpkin/issues/2472). Those files are not
+covered by HaskMC's GPL license, and attribution does not grant permission to redistribute them.
+Automated binary, container, and nightly publishing is disabled in HaskMC until the corresponding
+source and asset-compliance process is resolved. See the notices before redistributing builds.
 
-* **Pumpkin Server**: Licensed under the [GNU General Public License v3.0 (GPLv3)](LICENSE).
-* **Plugin API (`pumpkin-plugin-api` & `pumpkin-plugin-wit`)**: Dual-licensed under [MIT](crates/pumpkin-plugin-api/LICENSE-MIT) OR [Apache-2.0](crates/pumpkin-plugin-api/LICENSE-APACHE) for maximum flexibility when writing plugins.
-* **Third-Party Assets & Data**: Bedrock mappings, protocol conversion data, and Minecraft assets are subject to their respective licenses and attribution terms. See [assets/NOTICE.md](assets/NOTICE.md) for full details.
+No legal process can guarantee that a repository will never receive a complaint or takedown.
+HaskMC's policy is to preserve attribution, avoid copied/decompiled additions, respond promptly
+to rights-holder notices, and remove or replace material whose redistribution cannot be verified.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions must be original or based on clearly
+licensed sources. Do not submit decompiled Minecraft code, copied game assets, server/client JARs,
+or generated output whose provenance cannot be documented.
