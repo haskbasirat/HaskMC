@@ -2,6 +2,7 @@
 extend-exclude = ["assets/", "crates/haskmc-data/src/generated"]
 
 [default.extend-words]
+Hask = "Hask"
 handled = "handled"
 received = "received"
 ba = "ba"
