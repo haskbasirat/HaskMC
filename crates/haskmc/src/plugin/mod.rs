@@ -1233,6 +1233,10 @@ impl PluginManager {
         }
     }
 
+    // The outer unit error is part of the plugin messaging contract: it marks
+    // an invalid self-addressed message, while the inner error comes from the
+    // receiving plugin.
+    #[allow(clippy::result_unit_err)]
     pub async fn send_message(
         &self,
         sender: &str,

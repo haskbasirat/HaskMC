@@ -1,4 +1,9 @@
 #![deny(clippy::unwrap_used)]
+// Rust 1.98 introduced this lint. Keep compatibility with the MSRV toolchain,
+// where the lint name is not yet known, while allowing generated async-trait
+// implementations that intentionally have no suspension point.
+#![allow(unknown_lints)]
+#![allow(clippy::unused_async_trait_impl)]
 #![cfg_attr(test, allow(clippy::unwrap_used, clippy::expect_used, clippy::panic))]
 // Not warn event sending macros
 #![allow(unused_labels, deprecated)]
