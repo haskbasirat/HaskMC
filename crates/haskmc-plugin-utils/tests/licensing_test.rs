@@ -88,7 +88,7 @@ fn global_init_and_metadata_access() {
         plugin_name: "economy-core".to_string(),
         version: "3.2.1".to_string(),
         dev_id: 20,
-        dev_name: "pumpkin-dev".to_string(),
+        dev_name: "haskmc-dev".to_string(),
         is_paid: true,
         user_id: 8888,
         license_key: Some("KEY-8888".to_string()),
@@ -103,7 +103,7 @@ fn global_init_and_metadata_access() {
 
     // 2. Global metadata access
     assert_eq!(get_metadata().unwrap().plugin_id, 777);
-    assert_eq!(metadata().unwrap().dev_name, "pumpkin-dev");
+    assert_eq!(metadata().unwrap().dev_name, "haskmc-dev");
 
     // 3. Verify check license models deserialize properly
     let check_resp =
